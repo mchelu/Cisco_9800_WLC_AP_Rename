@@ -12,7 +12,8 @@ requests.packages.urllib3.disable_warnings()
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 filename = os.path.join(current_dir, 'ap_info.txt')
-WLC_IP="10.192.3.211"
+#CHANGE THIS
+WLC_IP="1.1.1.1"
 
 def change_ap_name(new_ap_name,old_ap_name,ap_mac_addr,change_by_name_or_mac):
     
