@@ -112,3 +112,5 @@ with requests.Session() as s:
                 for index in range(len(ap_names_file)):
                     if(ap_names_file[index].split(" ")[1].lower() == ap_eth_mac.lower() and ap_names_file[index].split(" ")[0].lower()!=ap_name.lower()):
                         change_ap_name(ap_names_file[index].split(" ")[0],ap_name.lower(),ap_mac.lower(),0)
+            else:
+                raise Exception("File is incorectly formatted. Please make sure the first line in the file is one of these options: \nNEW_NAME WTP_MAC\nNEW_NAME OLD_NAME\nNEW_NAME ETH_MAC")
